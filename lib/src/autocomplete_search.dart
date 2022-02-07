@@ -109,9 +109,9 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
         elevation: 0.0,
         child: Row(
           children: <Widget>[
-            SizedBox(width: 10),
-            Icon(Icons.search, color: Theme.of(context).primaryColor),
-            SizedBox(width: 10),
+            //SizedBox(width: 10),
+            //Icon(Icons.search, color: Theme.of(context).primaryColor),
+            //SizedBox(width: 10),
             Expanded(child: _buildSearchTextField()),
             _buildTextClearIcon(),
           ],

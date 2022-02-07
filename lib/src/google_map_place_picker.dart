@@ -317,12 +317,40 @@ class GoogleMapPlacePicker extends StatelessWidget {
       elevation: 1.0,
       color: Theme.of(context).cardColor,
       child: //state == SearchingState.Searching && changeStateManually == false ? _buildLoadingIndicator() : _buildSelectionDetails(context, data)
-      state == SearchingState.Searching ? _buildLoadingIndicator() : _buildSelectionDetails(context, data),
+      state == SearchingState.Searching ? _buildLoadingIndicator(context) : _buildSelectionDetails(context, data),
     );
   }
 
-  Widget _buildLoadingIndicator() {
+  Widget _buildLoadingIndicator(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(10),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: RaisedButton(
+                  color: Theme.of(context).primaryColor,
+                  elevation: 0,
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  child: Text(
+                    "Confirm location",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                  ),
+                  onPressed: null,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+    /*return Container(
       height: 48,
       child: const Center(
         child: SizedBox(
@@ -331,7 +359,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
           child: CircularProgressIndicator(),
         ),
       ),
-    );
+    );*/
   }
 
   Widget _buildSelectionDetails(BuildContext context, PickResult result) {
@@ -355,7 +383,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                  child: Text(
                    "Confirm location",
-                   style: TextStyle(fontSize: 16),
+                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                  ),
                  shape: RoundedRectangleBorder(
                    borderRadius: BorderRadius.circular(4.0),
