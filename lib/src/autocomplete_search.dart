@@ -18,7 +18,7 @@ class AutoCompleteSearch extends StatefulWidget {
       @required this.appBarKey,
       this.hintText,
       this.searchingText = "Searching...",
-      this.height = 60,
+      this.height = 50,
       this.contentPadding = EdgeInsets.zero,
       this.debounceMilliseconds,
       this.onSearchFailed,
@@ -127,8 +127,8 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         border: InputBorder.none,
-        isDense: true,
-        contentPadding: widget.contentPadding,
+        isDense: false,//true,
+        //contentPadding: widget.contentPadding,
       ),
     );
   }
