@@ -309,8 +309,8 @@ class GoogleMapPlacePicker extends StatelessWidget {
       leftPosition: MediaQuery.of(context).size.width * 0.025,
       rightPosition: MediaQuery.of(context).size.width * 0.025,
       width: MediaQuery.of(context).size.width * 0.9,
-      borderRadius: BorderRadius.circular(12.0),
-      elevation: 4.0,
+      borderRadius: BorderRadius.circular(8.0),
+      elevation: 1.0,
       color: Theme.of(context).cardColor,
       child: state == SearchingState.Searching && changeStateManually == false ? _buildLoadingIndicator() : _buildSelectionDetails(context, data)
       //state == SearchingState.Searching ? _buildLoadingIndicator() : _buildSelectionDetails(context, data),
@@ -342,6 +342,8 @@ class GoogleMapPlacePicker extends StatelessWidget {
           ),
           SizedBox(height: 10),
           RaisedButton(
+            color: Theme.of(context).primaryColor,
+            elevation: 0,
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Text(
               "Select here",

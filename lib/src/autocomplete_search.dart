@@ -18,7 +18,7 @@ class AutoCompleteSearch extends StatefulWidget {
       @required this.appBarKey,
       this.hintText,
       this.searchingText = "Searching...",
-      this.height = 40,
+      this.height = 60,
       this.contentPadding = EdgeInsets.zero,
       this.debounceMilliseconds,
       this.onSearchFailed,
@@ -105,7 +105,7 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
         color: Theme.of(context).brightness == Brightness.dark
             ? Colors.black54
             : Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(8),
         elevation: 8.0,
         child: Row(
           children: <Widget>[
