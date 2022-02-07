@@ -342,21 +342,24 @@ class GoogleMapPlacePicker extends StatelessWidget {
           ),
           SizedBox(height: 10),
          Row(
+           mainAxisAlignment: MainAxisAlignment.center,
            children: [
-             RaisedButton(
-               color: Theme.of(context).primaryColor,
-               elevation: 0,
-               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-               child: Text(
-                 "Confirm location",
-                 style: TextStyle(fontSize: 16),
+             Expanded(
+               child: RaisedButton(
+                 color: Theme.of(context).primaryColor,
+                 elevation: 0,
+                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                 child: Text(
+                   "Confirm location",
+                   style: TextStyle(fontSize: 16),
+                 ),
+                 shape: RoundedRectangleBorder(
+                   borderRadius: BorderRadius.circular(4.0),
+                 ),
+                 onPressed: () {
+                   onPlacePicked(result);
+                 },
                ),
-               shape: RoundedRectangleBorder(
-                 borderRadius: BorderRadius.circular(4.0),
-               ),
-               onPressed: () {
-                 onPlacePicked(result);
-               },
              ),
            ],
          )
@@ -396,7 +399,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                     fillColor: Theme.of(context).primaryColor,
                     elevation: 8.0,
                     onPressed: onMyLocation,
-                    child: Icon(Icons.my_location),
+                    child: Icon(Icons.my_location, color: Colors.white,),
                   ),
                 )
               : Container(),
