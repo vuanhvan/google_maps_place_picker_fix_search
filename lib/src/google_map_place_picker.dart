@@ -341,23 +341,25 @@ class GoogleMapPlacePicker extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 10),
-          SizedBox.expand(
-            child: RaisedButton(
-              color: Theme.of(context).primaryColor,
-              elevation: 0,
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              child: Text(
-                "Confirm location",
-                style: TextStyle(fontSize: 16),
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(4.0),
-              ),
-              onPressed: () {
-                onPlacePicked(result);
-              },
-            ),
-          ),
+         Row(
+           children: [
+             RaisedButton(
+               color: Theme.of(context).primaryColor,
+               elevation: 0,
+               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+               child: Text(
+                 "Confirm location",
+                 style: TextStyle(fontSize: 16),
+               ),
+               shape: RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(4.0),
+               ),
+               onPressed: () {
+                 onPlacePicked(result);
+               },
+             ),
+           ],
+         )
         ],
       ),
     );
