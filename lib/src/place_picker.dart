@@ -209,9 +209,11 @@ class _PlacePickerState extends State<PlacePicker> {
                 appBar: AppBar(
                   key: appBarKey,
                   automaticallyImplyLeading: false,
-                  iconTheme: Theme.of(context).iconTheme,
+                  iconTheme: IconThemeData(
+                    color: Colors.grey
+                  ),
                   elevation: 0,
-                  backgroundColor: Colors.transparent,
+                  backgroundColor: Colors.white,
                   titleSpacing: 0.0,
                   title: _buildSearchBar(),
                 ),
