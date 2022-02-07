@@ -326,6 +326,16 @@ class GoogleMapPlacePicker extends StatelessWidget {
       margin: EdgeInsets.all(10),
       child: Column(
         children: <Widget>[
+          Container(
+            height: 48,
+            child: Center(
+              child: SizedBox(
+                width: 24,
+                height: 24,
+                child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation(Theme.of(context).primaryColor),),
+              ),
+            ),
+          ),
           SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
