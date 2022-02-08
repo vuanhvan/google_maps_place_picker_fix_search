@@ -236,7 +236,7 @@ class _PlacePickerState extends State<PlacePicker> {
                           color: Colors.grey
                       ),
                       elevation: 0,
-                      backgroundColor: Colors.transparent,
+                      backgroundColor: Colors.white,
                       titleSpacing: 0.0,
                       title: _buildSearchBar(),
                     ),
