@@ -18,7 +18,7 @@ class AutoCompleteSearch extends StatefulWidget {
       @required this.appBarKey,
       this.hintText,
       this.searchingText = "Searching...",
-      this.height = 50,
+      this.height = 45,
       this.contentPadding = EdgeInsets.zero,
       this.debounceMilliseconds,
       this.onSearchFailed,
