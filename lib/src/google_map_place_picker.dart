@@ -50,6 +50,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
     this.language,
     this.forceSearchOnZoomChanged,
     this.hidePlaceDetailsWhenDraggingPin,
+    this.confirmButtonLabel = 'Confirm location'
   }) : super(key: key);
 
   final LatLng initialTarget;
@@ -75,6 +76,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
   final bool selectInitialPosition;
 
   final String language;
+  final String confirmButtonLabel;
 
   final bool forceSearchOnZoomChanged;
   final bool hidePlaceDetailsWhenDraggingPin;
@@ -346,7 +348,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                   elevation: 0,
                   padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Text(
-                    "Confirm location",
+                    confirmButtonLabel,
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                   shape: RoundedRectangleBorder(
@@ -392,7 +394,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                  elevation: 0,
                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                  child: Text(
-                   "Confirm location",
+                   confirmButtonLabel,
                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                  ),
                  shape: RoundedRectangleBorder(

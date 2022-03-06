@@ -60,6 +60,7 @@ class PlacePicker extends StatefulWidget {
     this.automaticallyImplyAppBarLeading = true,
     this.autocompleteOnTrailingWhitespace = false,
     this.hidePlaceDetailsWhenDraggingPin = true,
+    this.confirmButtonLabel = 'Confirm location'
   }) : super(key: key);
 
   final String apiKey;
@@ -72,6 +73,7 @@ class PlacePicker extends StatefulWidget {
 
   final String hintText;
   final String searchingText;
+  final String confirmButtonLabel;
   // final double searchBarHeight;
   // final EdgeInsetsGeometry contentPadding;
 
@@ -452,6 +454,7 @@ class _PlacePickerState extends State<PlacePicker> {
       language: widget.autocompleteLanguage,
       forceSearchOnZoomChanged: widget.forceSearchOnZoomChanged,
       hidePlaceDetailsWhenDraggingPin: widget.hidePlaceDetailsWhenDraggingPin,
+      confirmButtonLabel: widget.confirmButtonLabel,
       onToggleMapType: () {
         provider.switchMapType();
       },
