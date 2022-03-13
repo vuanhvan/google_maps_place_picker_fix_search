@@ -264,8 +264,7 @@ class _PlacePickerState extends State<PlacePicker> {
               children.add(CircularProgressIndicator(
                 backgroundColor: Colors.white,
                 strokeWidth: 2,
-                valueColor: AlwaysStoppedAnimation(
-                    Theme.of(context).primaryColor),
+                valueColor: AlwaysStoppedAnimation(Theme.of(context).primaryColor),
               ));
             }
 
@@ -418,7 +417,11 @@ class _PlacePickerState extends State<PlacePicker> {
               .updateCurrentLocation(widget.forceAndroidLocationManager),
           builder: (context, snap) {
             if (snap.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator(
+                backgroundColor: Colors.white,
+                strokeWidth: 2,
+                valueColor: AlwaysStoppedAnimation(Theme.of(context).primaryColor),
+              ));
             } else {
               if (provider.currentPosition == null) {
                 return _buildMap(widget.initialPosition);
@@ -433,7 +436,11 @@ class _PlacePickerState extends State<PlacePicker> {
         future: Future.delayed(Duration(milliseconds: 1)),
         builder: (context, snap) {
           if (snap.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(child: CircularProgressIndicator(
+              backgroundColor: Colors.white,
+              strokeWidth: 2,
+              valueColor: AlwaysStoppedAnimation(Theme.of(context).primaryColor),
+            ));
           } else {
             return _buildMap(widget.initialPosition);
           }
