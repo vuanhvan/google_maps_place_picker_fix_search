@@ -261,7 +261,12 @@ class _PlacePickerState extends State<PlacePicker> {
                 )
               ]);
             } else {
-              children.add(CircularProgressIndicator());
+              children.add(CircularProgressIndicator(
+                backgroundColor: Colors.white,
+                strokeWidth: 2,
+                valueColor: AlwaysStoppedAnimation(
+                    Theme.of(context).primaryColor),
+              ));
             }
 
             return Scaffold(
